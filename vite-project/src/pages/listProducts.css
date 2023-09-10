@@ -1,0 +1,50 @@
+.ratting {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    
+}
+.ratting-star {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ratting-star input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    width: 10px;
+    height: 40px;
+}
+.ratting-star input::before {
+    content: "\f005";
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 18px;
+    left: 0px;
+    color: #a29292;
+    transition: 0.5s;
+}
+.ratting-star input:nth-child(2n+1)::before {
+    right: 0px;
+    left: initial;
+    
+}
+.ratting-star input:hover ~ input::before, .ratting-star input:hover::before  {
+    color: orange;
+}
+.ratting-star input:checked ~ input::before {
+    color: orange;
+}
+
+
+.ratting_sales-turn {
+    margin-top: 10px;
+    text-align: center;
+}
